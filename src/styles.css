@@ -85,6 +85,29 @@ h1 {
   font-family: "UnifrakturCook";
 }
 
+.icon {
+  width: 32px;
+  height: 32px;
+}
+
+.hyper-git {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.hyper-ext {
+  position: absolute;
+  right: 35px;
+  top: 0;
+}
+
+.card {
+  position: relative;
+  border: solid black 1px;
+  height: 100px;
+}
+
 @media (max-width: 600px) {
   h1 {
     text-align: center;
