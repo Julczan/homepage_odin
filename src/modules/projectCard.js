@@ -10,6 +10,7 @@ function createCard(name, description, externalHyper, githubHyper, imgSrc) {
   const projectName = document.createElement("h2");
   const projectDesc = document.createElement("p");
 
+  screenshot.src = "";
   githubIcon.src =
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg";
   externalIcon.src = externalSrc;
