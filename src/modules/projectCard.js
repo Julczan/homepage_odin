@@ -7,10 +7,11 @@ function createCard(name, description, externalHyper, githubHyper, imgSrc) {
   const hyperLinkGit = document.createElement("a");
   const hyperLinkExt = document.createElement("a");
   const card = document.createElement("div");
+  const container = document.createElement("div");
   const projectName = document.createElement("h2");
   const projectDesc = document.createElement("p");
 
-  screenshot.src = "";
+  screenshot.src = imgSrc;
   githubIcon.src =
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg";
   externalIcon.src = externalSrc;
@@ -19,9 +20,11 @@ function createCard(name, description, externalHyper, githubHyper, imgSrc) {
   hyperLinkGit.href = githubHyper;
   projectDesc.textContent = description;
 
+  screenshot.classList.add("screenshot");
   githubIcon.classList.add("icon");
   externalIcon.classList.add("icon");
   card.classList.add("card");
+  container.classList.add("card-container");
   hyperLinkGit.classList.add("hyper-git");
   hyperLinkExt.classList.add("hyper-ext");
 
@@ -29,10 +32,11 @@ function createCard(name, description, externalHyper, githubHyper, imgSrc) {
   hyperLinkExt.appendChild(externalIcon);
 
   card.appendChild(screenshot);
-  card.appendChild(projectName);
-  card.appendChild(projectDesc);
-  card.appendChild(hyperLinkGit);
-  card.appendChild(hyperLinkExt);
+  container.appendChild(projectName);
+  container.appendChild(projectDesc);
+  container.appendChild(hyperLinkGit);
+  container.appendChild(hyperLinkExt);
+  card.appendChild(container);
 
   return card;
 }
