@@ -70,3 +70,23 @@ h6 {
 /*
 
 /*  */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.portrait {
+  max-width: 400px;
+  object-fit: contain;
+}
+
+h1 {
+  font-family: "UnifrakturCook";
+}
+
+@media (max-width: 600px) {
+  h1 {
+    text-align: center;
+  }
+}
