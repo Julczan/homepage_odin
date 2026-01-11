@@ -74,15 +74,20 @@ h6 {
 body {
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 
 .portrait {
   max-width: 400px;
-  object-fit: contain;
 }
 
-h1 {
+h1,
+.portrait-text {
   font-family: "UnifrakturCook";
+}
+
+.portrait-text {
+  font-size: 2rem;
 }
 
 .icon {
@@ -105,7 +110,7 @@ h1 {
 .projects {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .screenshot {
@@ -119,6 +124,22 @@ h1 {
 
 .card {
   border: solid black 1px;
+}
+
+.portrait-container {
+  position: relative;
+}
+
+.portrait-text {
+  position: absolute;
+  color: white;
+  bottom: 20px;
+}
+
+.icons-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {

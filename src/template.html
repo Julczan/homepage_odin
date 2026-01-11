@@ -14,31 +14,85 @@
   </head>
   <body>
     <header>
-      <picture>
-        <img
-          class="portrait"
-          sizes="(max-width: 864px) 100vw, 864px"
-          srcset="
-            ./assets/images/Portrait/Portrait_ajpole_c_scale,w_300.png 300w,
-            ./assets/images/Portrait/Portrait_ajpole_c_scale,w_435.png 435w,
-            ./assets/images/Portrait/Portrait_ajpole_c_scale,w_545.png 545w,
-            ./assets/images/Portrait/Portrait_ajpole_c_scale,w_636.png 636w,
-            ./assets/images/Portrait/Portrait_ajpole_c_scale,w_718.png 718w,
-            ./assets/images/Portrait/Portrait_ajpole_c_scale,w_794.png 794w,
-            ./assets/images/Portrait/Portrait_ajpole_c_scale,w_842.png 842w,
-            ./assets/images/Portrait/Portrait_ajpole_c_scale,w_864.png 864w
-          "
-          src="./assets/images/Portrait/Portrait_ajpole_c_scale,w_864.png"
-          alt="Portrait of the author of the page"
-        />
-      </picture>
-      <h1>About me</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
-        autem officiis unde repudiandae explicabo illum quo consequuntur modi
-        hic sapiente, eos accusamus, labore dicta delectus in voluptatum, a quae
-        nemo.
-      </p>
+      <div class="portrait-container">
+        <picture class="portrait">
+          <source
+            media="(max-width: 767px)"
+            sizes="(max-width: 767px) 100vw, 767px"
+            srcset="
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_1_1,c_fill,g_auto__c_scale,w_200.png 200w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_1_1,c_fill,g_auto__c_scale,w_340.png 340w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_1_1,c_fill,g_auto__c_scale,w_447.png 447w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_1_1,c_fill,g_auto__c_scale,w_536.png 536w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_1_1,c_fill,g_auto__c_scale,w_615.png 615w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_1_1,c_fill,g_auto__c_scale,w_686.png 686w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_1_1,c_fill,g_auto__c_scale,w_753.png 753w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_1_1,c_fill,g_auto__c_scale,w_767.png 767w
+            "
+          />
+          <source
+            media="(min-width: 768px) and (max-width: 991px)"
+            sizes="(max-width: 991px) 70vw, 694px"
+            srcset="
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_4_3,c_fill,g_auto__c_scale,w_538.png 538w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_4_3,c_fill,g_auto__c_scale,w_570.png 570w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_4_3,c_fill,g_auto__c_scale,w_601.png 601w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_4_3,c_fill,g_auto__c_scale,w_631.png 631w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_4_3,c_fill,g_auto__c_scale,w_658.png 658w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_4_3,c_fill,g_auto__c_scale,w_687.png 687w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_ar_4_3,c_fill,g_auto__c_scale,w_694.png 694w
+            "
+          />
+          <img
+            sizes="(max-width: 2160px) 40vw, 864px"
+            srcset="
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_397.png 397w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_500.png 500w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_590.png 590w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_668.png 668w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_740.png 740w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_807.png 807w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_840.png 840w,
+              /src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_864.png 864w
+            "
+            src="/src/assets/images/Portrait_v8ks3d/Portrait_v8ks3d_c_scale,w_864.png"
+            alt=""
+          />
+        </picture>
+        <p class="portrait-text">Julian</p>
+      </div>
+      <div class="info-container">
+        <h1>About me</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur
+          autem officiis unde repudiandae explicabo illum quo consequuntur modi
+          hic sapiente, eos accusamus, labore dicta delectus in voluptatum, a
+          quae nemo.
+        </p>
+        <div class="icons-container">
+          <a href="https://github.com/Julczan">
+            <img
+              class="icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+            />
+          </a>
+
+          <a href="https://www.linkedin.com/">
+            <img
+              class="icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg"
+            />
+          </a>
+
+          <a href="https://x.com/">
+            <img
+              class="icon"
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/twitter/twitter-original.svg"
+            />
+          </a>
+        </div>
+      </div>
+
       <div class="box"></div>
     </header>
     <main>
