@@ -71,6 +71,17 @@ h6 {
 
 /*  */
 
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -98,10 +109,17 @@ h1,
 .icon {
   width: 32px;
   height: 32px;
+  will-change: transform;
+  transition: transform 300ms;
+}
+
+.icon:hover {
+  transform: scale(1.1);
 }
 
 header {
   margin-bottom: 60px;
+  max-width: 1100px;
 }
 
 .hyper-git {
@@ -121,7 +139,7 @@ header {
   gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .card-container {
@@ -130,14 +148,23 @@ header {
 }
 
 .card {
-  border: solid black 1px;
+  border: solid rgba(0, 0, 0, 0.321) 1px;
+  will-change: transform;
+  transition: transform 500ms;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 125ms;
 }
 
 .portrait-container {
-  border: solid black 1px;
   position: relative;
   float: left;
   margin-right: 20px;
+  will-change: transform;
+  animation: slide-in 1000ms ease-out;
+  animation-fill-mode: backwards;
 }
 
 .icons-container {
@@ -149,19 +176,18 @@ header {
 
 .about-me {
   margin-top: 160px;
-  max-width: 1100px;
-  border: solid black 1px;
+  border: solid rgba(0, 0, 0, 0.332) 1px;
   padding: 20px;
 }
 
 .footer-img {
-  max-width: 500px;
+  max-width: 620px;
 }
 
 footer {
-  border: solid black 1px;
   display: flex;
   gap: 20px;
+  max-width: 1100px;
 }
 
 @media (max-width: 600px) {

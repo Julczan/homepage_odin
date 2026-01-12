@@ -5,8 +5,8 @@ import battleshipImg from "./assets/images/Battleship.png";
 const projectContainer = document.querySelector(".projects");
 
 const project = createCard(
-  "Project name",
-  "Short description of the project",
+  "Battleship",
+  "Battleship game",
   "https://julczan.github.io/battleship_odin/",
   "https://github.com/Julczan/battleship_odin",
   battleshipImg
