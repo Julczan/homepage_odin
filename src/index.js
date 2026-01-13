@@ -1,10 +1,11 @@
 import "./styles.css";
 import { createCard } from "./modules/projectCard";
 import battleshipImg from "./assets/images/Battleship.png";
+import weatherImg from "./assets/images/weather-app.png";
 
 const projectContainer = document.querySelector(".projects");
 
-const project = createCard(
+const battleship = createCard(
   "Battleship",
   "Battleship game",
   "https://julczan.github.io/battleship_odin/",
@@ -12,12 +13,12 @@ const project = createCard(
   battleshipImg
 );
 
-const project1 = createCard(
-  "Project name",
-  "Short description of the project",
-  "https://julczan.github.io/battleship_odin/",
-  "https://github.com/Julczan/battleship_odin",
-  battleshipImg
+const weather = createCard(
+  "Weather App",
+  "Weather App made in HTML, CSS and JS",
+  "https://julczan.github.io/weather_app_odin/",
+  "https://github.com/Julczan/weather_app_odin",
+  weatherImg
 );
 
 const project2 = createCard(
@@ -49,8 +50,8 @@ const project5 = createCard(
   battleshipImg
 );
 
-projectContainer.appendChild(project);
-projectContainer.appendChild(project1);
+projectContainer.appendChild(battleship);
+projectContainer.appendChild(weather);
 projectContainer.appendChild(project2);
 projectContainer.appendChild(project3);
 projectContainer.appendChild(project4);
