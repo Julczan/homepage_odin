@@ -15,16 +15,41 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       {
         test: /\.html$/i,
         loader: "html-loader",
-      },
-      {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        options: {
+          sources: {
+            list: [
+              // All default supported tags and attributes
+              "...",
+              {
+                tag: "img",
+                attribute: "data-src",
+                type: "src",
+              },
+              {
+                tag: "img",
+                attribute: "data-srcset",
+                type: "srcset",
+              },
+            ],
+            urlFilter: (attribute, value, resourcePath) => {
+              // The `attribute` argument contains a name of the HTML attribute.
+              // The `value` argument contains a value of the HTML attribute.
+              // The `resourcePath` argument contains a path to the loaded HTML file.
+
+              if (/example\.pdf$/.test(value)) {
+                return false;
+              }
+
+              return true;
+            },
+          },
+        },
       },
     ],
   },
