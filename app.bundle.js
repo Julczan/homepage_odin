@@ -241,7 +241,7 @@ module.exports = function (item) {
 
 /***/ },
 
-/***/ 474
+/***/ 365
 (module, __webpack_exports__, __webpack_require__) {
 
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
@@ -256,8 +256,276 @@ module.exports = function (item) {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, `// extracted by mini-css-extract-plugin
-export {};`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA;QACS,CAAA","sourcesContent":["// extracted by mini-css-extract-plugin\nexport {};"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `/* CSS RESET */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+
+/*  */
+
+@keyframes slide-in {
+  from {
+    transform: skewY(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: skewY(8deg);
+    opacity: 1;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  align-items: center;
+}
+
+.portrait {
+  max-width: 400px;
+}
+
+h1,
+.portrait-text {
+  font-family: "UnifrakturCook";
+}
+
+.portrait-text {
+  font-size: 2rem;
+  position: absolute;
+  color: white;
+  bottom: 0;
+  left: 110px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  will-change: transform;
+  transition: transform 300ms;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+header {
+  margin-bottom: 60px;
+  max-width: 1100px;
+}
+
+header::before {
+  content: "";
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  z-index: -1;
+  top: -48 px;
+  left: 0;
+  background: rgb(1, 30, 0);
+  transform: skewY(8deg);
+  will-change: transform;
+  animation: slide-in 1000ms ease-out;
+  animation-fill-mode: backwards;
+  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);
+}
+
+footer::before {
+  content: "";
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  background: rgb(1, 30, 0);
+  z-index: -1;
+  left: 0;
+  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);
+}
+
+.hyper-git {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.hyper-ext {
+  position: absolute;
+  right: 45px;
+  top: 10px;
+}
+
+.projects {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.card-container {
+  position: relative;
+  padding: 10px;
+}
+
+.card {
+  border: solid rgba(0, 0, 0, 0.321) 1px;
+  will-change: transform;
+  transition: transform 500ms;
+  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);
+  display: grid;
+  grid-template-rows: 1fr 0.25fr;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: transform 125ms;
+}
+
+.portrait-container {
+  position: relative;
+  float: left;
+  margin-right: 20px;
+  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);
+}
+
+.icons-container {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.about-me {
+  margin-top: 160px;
+  border: solid rgba(0, 0, 0, 0.332) 1px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);
+  background-color: white;
+}
+
+.footer-img {
+  max-width: 400px;
+  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);
+}
+.screenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  gap: 20px;
+  max-width: 1100px;
+  color: white;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    text-align: center;
+  }
+
+  header,
+  footer {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-me {
+    margin-top: 0;
+  }
+  .portrait-container {
+    margin-right: 0;
+  }
+  .portrait {
+    max-width: 300px;
+  }
+
+  .footer-img {
+    max-width: 300px;
+  }
+  body {
+    margin: 10px;
+  }
+
+  footer::before {
+    height: 620px;
+  }
+}
+
+@media (min-width: 1100px) {
+  .projects {
+    max-width: 1100px;
+  }
+}
+`, "",{"version":3,"sources":["webpack://./src/styles.css"],"names":[],"mappings":"AAAA,cAAc;AACd,6CAA6C;AAC7C;;;EAGE,sBAAsB;AACxB;;AAEA,6BAA6B;AAC7B;EACE,SAAS;AACX;;AAEA,iCAAiC;AACjC;EACE;IACE,gCAAgC;EAClC;AACF;;AAEA;EACE,kCAAkC;EAClC,gBAAgB;EAChB,8BAA8B;EAC9B,mCAAmC;AACrC;;AAEA,8BAA8B;AAC9B;;;;;EAKE,cAAc;EACd,eAAe;AACjB;;AAEA,uCAAuC;AACvC;;;;EAIE,aAAa;AACf;;AAEA,4BAA4B;AAC5B;;;;;;;EAOE,yBAAyB;AAC3B;;AAEA,6BAA6B;AAC7B;EACE,iBAAiB;AACnB;AACA;;;;;;EAME,kBAAkB;AACpB;;AAEA;;KAEK;;AAEL;EACE;IACE,sBAAsB;IACtB,UAAU;EACZ;EACA;IACE,sBAAsB;IACtB,UAAU;EACZ;AACF;;AAEA;EACE,aAAa;EACb,sBAAsB;EACtB,YAAY;EACZ,mBAAmB;AACrB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;;EAEE,6BAA6B;AAC/B;;AAEA;EACE,eAAe;EACf,kBAAkB;EAClB,YAAY;EACZ,SAAS;EACT,WAAW;AACb;;AAEA;EACE,WAAW;EACX,YAAY;EACZ,sBAAsB;EACtB,2BAA2B;AAC7B;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,mBAAmB;EACnB,iBAAiB;AACnB;;AAEA;EACE,WAAW;EACX,WAAW;EACX,aAAa;EACb,kBAAkB;EAClB,WAAW;EACX,WAAW;EACX,OAAO;EACP,yBAAyB;EACzB,sBAAsB;EACtB,sBAAsB;EACtB,mCAAmC;EACnC,8BAA8B;EAC9B,kDAAkD;AACpD;;AAEA;EACE,WAAW;EACX,WAAW;EACX,aAAa;EACb,kBAAkB;EAClB,yBAAyB;EACzB,WAAW;EACX,OAAO;EACP,kDAAkD;AACpD;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,SAAS;AACX;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,SAAS;AACX;;AAEA;EACE,aAAa;EACb,SAAS;EACT,4DAA4D;EAC5D,gBAAgB;EAChB,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;EAClB,aAAa;AACf;;AAEA;EACE,sCAAsC;EACtC,sBAAsB;EACtB,2BAA2B;EAC3B,kDAAkD;EAClD,aAAa;EACb,8BAA8B;AAChC;;AAEA;EACE,sBAAsB;EACtB,2BAA2B;AAC7B;;AAEA;EACE,kBAAkB;EAClB,WAAW;EACX,kBAAkB;EAClB,kDAAkD;AACpD;;AAEA;EACE,aAAa;EACb,SAAS;EACT,yBAAyB;EACzB,gBAAgB;AAClB;;AAEA;EACE,iBAAiB;EACjB,sCAAsC;EACtC,aAAa;EACb,kDAAkD;EAClD,uBAAuB;AACzB;;AAEA;EACE,gBAAgB;EAChB,kDAAkD;AACpD;AACA;EACE,WAAW;EACX,YAAY;EACZ,iBAAiB;AACnB;;AAEA;EACE,aAAa;EACb,SAAS;EACT,iBAAiB;EACjB,YAAY;EACZ,mBAAmB;AACrB;;AAEA;EACE;IACE,kBAAkB;EACpB;;EAEA;;IAEE,aAAa;IACb,SAAS;IACT,sBAAsB;IACtB,mBAAmB;EACrB;EACA;IACE,aAAa;EACf;EACA;IACE,eAAe;EACjB;EACA;IACE,gBAAgB;EAClB;;EAEA;IACE,gBAAgB;EAClB;EACA;IACE,YAAY;EACd;;EAEA;IACE,aAAa;EACf;AACF;;AAEA;EACE;IACE,iBAAiB;EACnB;AACF","sourcesContent":["/* CSS RESET */\n/* 1. Use a more-intuitive box-sizing model */\n*,\n*::before,\n*::after {\n  box-sizing: border-box;\n}\n\n/* 2. Remove default margin */\n*:not(dialog) {\n  margin: 0;\n}\n\n/* 3. Enable keyword animations */\n@media (prefers-reduced-motion: no-preference) {\n  html {\n    interpolate-size: allow-keywords;\n  }\n}\n\nbody {\n  /* 4. Add accessible line-height */\n  line-height: 1.5;\n  /* 5. Improve text rendering */\n  -webkit-font-smoothing: antialiased;\n}\n\n/* 6. Improve media defaults */\nimg,\npicture,\nvideo,\ncanvas,\nsvg {\n  display: block;\n  max-width: 100%;\n}\n\n/* 7. Inherit fonts for form controls */\ninput,\nbutton,\ntextarea,\nselect {\n  font: inherit;\n}\n\n/* 8. Avoid text overflows */\np,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  overflow-wrap: break-word;\n}\n\n/* 9. Improve line wrapping */\np {\n  text-wrap: pretty;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6 {\n  text-wrap: balance;\n}\n\n/*\n\n/*  */\n\n@keyframes slide-in {\n  from {\n    transform: skewY(0deg);\n    opacity: 0;\n  }\n  to {\n    transform: skewY(8deg);\n    opacity: 1;\n  }\n}\n\nbody {\n  display: flex;\n  flex-direction: column;\n  margin: 10px;\n  align-items: center;\n}\n\n.portrait {\n  max-width: 400px;\n}\n\nh1,\n.portrait-text {\n  font-family: \"UnifrakturCook\";\n}\n\n.portrait-text {\n  font-size: 2rem;\n  position: absolute;\n  color: white;\n  bottom: 0;\n  left: 110px;\n}\n\n.icon {\n  width: 32px;\n  height: 32px;\n  will-change: transform;\n  transition: transform 300ms;\n}\n\n.icon:hover {\n  transform: scale(1.1);\n}\n\nheader {\n  margin-bottom: 60px;\n  max-width: 1100px;\n}\n\nheader::before {\n  content: \"\";\n  width: 100%;\n  height: 500px;\n  position: absolute;\n  z-index: -1;\n  top: -48 px;\n  left: 0;\n  background: rgb(1, 30, 0);\n  transform: skewY(8deg);\n  will-change: transform;\n  animation: slide-in 1000ms ease-out;\n  animation-fill-mode: backwards;\n  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);\n}\n\nfooter::before {\n  content: \"\";\n  width: 100%;\n  height: 400px;\n  position: absolute;\n  background: rgb(1, 30, 0);\n  z-index: -1;\n  left: 0;\n  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);\n}\n\n.hyper-git {\n  position: absolute;\n  right: 10px;\n  top: 10px;\n}\n\n.hyper-ext {\n  position: absolute;\n  right: 45px;\n  top: 10px;\n}\n\n.projects {\n  display: grid;\n  gap: 30px;\n  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));\n  margin-top: 20px;\n  margin-bottom: 80px;\n}\n\n.card-container {\n  position: relative;\n  padding: 10px;\n}\n\n.card {\n  border: solid rgba(0, 0, 0, 0.321) 1px;\n  will-change: transform;\n  transition: transform 500ms;\n  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);\n  display: grid;\n  grid-template-rows: 1fr 0.25fr;\n}\n\n.card:hover {\n  transform: scale(1.05);\n  transition: transform 125ms;\n}\n\n.portrait-container {\n  position: relative;\n  float: left;\n  margin-right: 20px;\n  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);\n}\n\n.icons-container {\n  display: flex;\n  gap: 10px;\n  justify-content: flex-end;\n  margin-top: 20px;\n}\n\n.about-me {\n  margin-top: 160px;\n  border: solid rgba(0, 0, 0, 0.332) 1px;\n  padding: 20px;\n  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);\n  background-color: white;\n}\n\n.footer-img {\n  max-width: 400px;\n  box-shadow: 5px 5px 5px rgba(108, 108, 108, 0.321);\n}\n.screenshot {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n}\n\nfooter {\n  display: flex;\n  gap: 20px;\n  max-width: 1100px;\n  color: white;\n  align-items: center;\n}\n\n@media (max-width: 600px) {\n  h1 {\n    text-align: center;\n  }\n\n  header,\n  footer {\n    display: flex;\n    gap: 20px;\n    flex-direction: column;\n    align-items: center;\n  }\n  .about-me {\n    margin-top: 0;\n  }\n  .portrait-container {\n    margin-right: 0;\n  }\n  .portrait {\n    max-width: 300px;\n  }\n\n  .footer-img {\n    max-width: 300px;\n  }\n  body {\n    margin: 10px;\n  }\n\n  footer::before {\n    height: 620px;\n  }\n}\n\n@media (min-width: 1100px) {\n  .projects {\n    max-width: 1100px;\n  }\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -504,8 +772,8 @@ var insertStyleElement_default = /*#__PURE__*/__webpack_require__.n(insertStyleE
 // EXTERNAL MODULE: ./node_modules/style-loader/dist/runtime/styleTagTransform.js
 var styleTagTransform = __webpack_require__(113);
 var styleTagTransform_default = /*#__PURE__*/__webpack_require__.n(styleTagTransform);
-// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./node_modules/mini-css-extract-plugin/dist/loader.js!./node_modules/css-loader/dist/cjs.js!./src/styles.css
-var styles = __webpack_require__(474);
+// EXTERNAL MODULE: ./node_modules/css-loader/dist/cjs.js!./src/styles.css
+var styles = __webpack_require__(365);
 ;// ./src/styles.css
 
       
