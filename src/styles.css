@@ -246,19 +246,12 @@ footer {
   .portrait-container {
     margin-right: 0;
   }
-  .portrait {
-    max-width: 300px;
-  }
-
-  .footer-img {
-    max-width: 300px;
-  }
   body {
     margin: 10px;
   }
 
   footer::before {
-    height: 620px;
+    height: 600px;
   }
 }
 
